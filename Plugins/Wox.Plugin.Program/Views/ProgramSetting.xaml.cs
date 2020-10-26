@@ -35,6 +35,7 @@ namespace Wox.Plugin.Program.Views
             programIgnoreView.ItemsSource = _settings.IgnoredSequence;
             StartMenuEnabled.IsChecked = _settings.EnableStartMenuSource;
             RegistryEnabled.IsChecked = _settings.EnableRegistrySource;
+            MicrosoftStoreAppsEnabled.IsChecked = _settings.EnableMicrosoftStoreApps;
         }
 
         private void ReIndexing()
@@ -139,6 +140,12 @@ namespace Wox.Plugin.Program.Views
         private void RegistryEnabled_Click(object sender, RoutedEventArgs e)
         {
             _settings.EnableRegistrySource = RegistryEnabled.IsChecked ?? false;
+            ReIndexing();
+        }
+
+        private void MicrosoftStoreAppsEnabled_Click(object sender, RoutedEventArgs e)
+        {
+            _settings.EnableMicrosoftStoreApps = MicrosoftStoreAppsEnabled.IsChecked ?? false;
             ReIndexing();
         }
 

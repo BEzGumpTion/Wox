@@ -15,6 +15,8 @@ namespace Wox.Plugin.Program
 
         public bool EnableRegistrySource { get; set; } = false;
 
+        public bool EnableMicrosoftStoreApps { get; set; } = true;
+
         internal const char SuffixSeperator = ';';
 
         
